@@ -1,15 +1,24 @@
+import { StudentStructure } from "../../types";
 import Button from "../Button/Button";
 import RemoveButton from "../RemoveButton/RemoveButton";
 import ToggleMoodButton from "../ToggleMoodButton/ToggleMoodButton";
 import "./StudentCard.css";
 
-const StudentCard = (): JSX.Element => {
+interface StudentCardProps {
+  student: StudentStructure;
+}
+
+const StudentCard = ({
+  student: { id, name, surname, isHappy },
+}: StudentCardProps): JSX.Element => {
   return (
     <article className="student">
-      <h2 className="student__name">Luis González</h2>
+      <h2 className="student__name">
+        {name} {surname}
+      </h2>
       <div className="student__actions">
-        <ToggleMoodButton isHappy={true} id={1} />
-        <RemoveButton id={2} />
+        <ToggleMoodButton isHappy={isHappy} id={id} />
+        <RemoveButton id={id} />
       </div>
     </article>
   );
