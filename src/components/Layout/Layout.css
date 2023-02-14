@@ -1,0 +1,66 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main-header {
+  height: 150px;
+  background-color: #b9314f;
+  color: #fff;
+}
+
+.main-header > * {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.students-info {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.students {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.student {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: #3a4f41;
+  color: #fff;
+  padding: 10px;
+}
+
+.student__name {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.student__actions {
+  display: flex;
+}
+
+.student__action {
+  transition: all 0.2s;
+  font-size: 1.2rem;
+}
+
+.student__action--toggle-mood:hover {
+  transform: rotate(180deg);
+}
+
+.student__action--remove:hover {
+  transform: scale(1.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .student__action {
+    transition: none;
+  }
+}
