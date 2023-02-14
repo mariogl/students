@@ -17,10 +17,14 @@ ul {
   list-style: none;
 }
 
+input,
 button {
   font-family: inherit;
   font-size: inherit;
   background-color: transparent;
   border: none;
+}
+
+button {
   cursor: pointer;
 }

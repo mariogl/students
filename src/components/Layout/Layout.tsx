@@ -10,6 +10,19 @@ const Layout = (): JSX.Element => {
       </header>
       <main className="container">
         <h2>Students list</h2>
+        <form className="form" autoComplete="off" noValidate>
+          <div className="form__control">
+            <label htmlFor="name">Name: </label>
+            <input type="text" id="name" />
+          </div>
+          <div className="form__control">
+            <label htmlFor="surname">Surname: </label>
+            <input type="text" id="surname" />
+          </div>
+          <div className="form__control">
+            <button type="submit">create</button>
+          </div>
+        </form>
         <span className="students-info">Total: 6 students</span>
         <ul className="students">
           <li>
