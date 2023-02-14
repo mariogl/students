@@ -1,4 +1,6 @@
 import Button from "../Button/Button";
+import RemoveButton from "../RemoveButton/RemoveButton";
+import ToggleMoodButton from "../ToggleMoodButton/ToggleMoodButton";
 import "./StudentCard.css";
 
 const StudentCard = (): JSX.Element => {
@@ -6,9 +8,8 @@ const StudentCard = (): JSX.Element => {
     <article className="student">
       <h2 className="student__name">Luis González</h2>
       <div className="student__actions">
-        <Button />
-        <Button />
-        {/* <button className="student__action student__action--remove">🗑️</button> */}
+        <ToggleMoodButton isHappy={true} id={1} />
+        <RemoveButton id={2} />
       </div>
     </article>
   );

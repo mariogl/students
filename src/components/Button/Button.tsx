@@ -1,10 +1,18 @@
 import "./Button.css";
 
-const Button = (): JSX.Element => {
+interface ButtonProps {
+  icon: string;
+  type: string;
+  actionOnClick: () => void;
+}
+
+const Button = ({ icon, type, actionOnClick }: ButtonProps): JSX.Element => {
   return (
-    <button className="student__action student__action--toggle-mood">
-      😊
-      {/* 😔 */}
+    <button
+      className={`student__action student__action--${type}`}
+      onClick={actionOnClick}
+    >
+      {icon}
     </button>
   );
 };
